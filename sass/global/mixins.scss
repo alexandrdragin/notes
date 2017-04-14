@@ -1,0 +1,73 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin container {
+  width: 320px;
+  margin: 0 auto;
+
+  @media #{$tablet-widths} {
+    width: 768px;
+  }
+
+  @media #{$desktop-widths} {
+    width: 1150px;
+  }
+}
+
+@mixin main-padding {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media #{$tablet-widths} {
+    padding-left: 50px;
+    padding-right: 50px;
+
+  }
+
+  @media #{$desktop-widths} {
+
+  }
+}
+
+@mixin header {
+  font-weight: bold;
+  line-height: 25px;
+  font-size: 18pt;
+
+  letter-spacing: 0.3px;
+
+  @media #{$tablet-widths} {
+    font-size: 32pt;
+  }
+
+  @media #{$desktop-widths} {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+@mixin button-text {
+  min-height: 52px;
+
+  text-align: center;
+  margin: auto;
+  width: 100%;
+
+  font-size: 14pt;
+
+  text-transform: uppercase;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2pt solid black;
+
+  @media #{$tablet-widths} {
+    font-size: 12pt;
+    letter-spacing: 1.5px;
+  }
+
+}
